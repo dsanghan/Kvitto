@@ -30,6 +30,11 @@
 		A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; };
 		A7E8161C1BC5390C00127748 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8161B1BC5390C00127748 /* Functions.swift */; };
 		A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; };
+		D79FD89D2379484C00D04B8F /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; };
+		D79FD89E2379484C00D04B8F /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; };
+		D79FD89F2379484C00D04B8F /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544941BC3FC7F00EC73B1 /* Receipt.swift */; };
+		D79FD8A02379484C00D04B8F /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8161B1BC5390C00127748 /* Functions.swift */; };
+		D79FD8A12379485D00D04B8F /* Kvitto.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D95B091BC437F700AB8A21 /* Kvitto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +255,13 @@
 			remoteGlobalIDString = A7EA07B71A2B2F6A00B61CCE;
 			remoteInfo = "DTFoundation (iOS)";
 		};
+		D79FD89B2379484400D04B8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A7EA07381A2B215200B61CCE;
+			remoteInfo = "DTFoundation (OSX)";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -292,6 +304,7 @@
 		A7E815E21BC531AB00127748 /* receipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = receipt; sourceTree = "<group>"; };
 		A7E8161B1BC5390C00127748 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS7Container.swift; sourceTree = "<group>"; };
+		D79FD8772379483B00D04B8F /* Kvitto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kvitto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79544661BC3FC1600EC73B1 /* Kvitto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79FD8742379483B00D04B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +393,7 @@
 				A795445C1BC3FC1600EC73B1 /* Kvitto.framework */,
 				A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */,
 				A70247891BC5763D0070DACA /* KvittoDemo.app */,
+				D79FD8772379483B00D04B8F /* Kvitto.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -486,6 +507,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D79FD8722379483B00D04B8F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79FD8A12379485D00D04B8F /* Kvitto.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -546,6 +575,25 @@
 			productReference = A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D79FD8762379483B00D04B8F /* Kvitto Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D79FD89A2379483B00D04B8F /* Build configuration list for PBXNativeTarget "Kvitto Mac" */;
+			buildPhases = (
+				D79FD8722379483B00D04B8F /* Headers */,
+				D79FD8732379483B00D04B8F /* Sources */,
+				D79FD8742379483B00D04B8F /* Frameworks */,
+				D79FD8752379483B00D04B8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D79FD89C2379484400D04B8F /* PBXTargetDependency */,
+			);
+			name = "Kvitto Mac";
+			productName = "Kvitto Mac";
+			productReference = D79FD8772379483B00D04B8F /* Kvitto.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -568,6 +616,11 @@
 						CreatedOnToolsVersion = 7.0;
 						LastSwiftMigration = 0920;
 					};
+					D79FD8762379483B00D04B8F = {
+						CreatedOnToolsVersion = 11.1;
+						DevelopmentTeam = Y4QG7ZV64J;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A79541BC1BC3FA2000EC73B1 /* Build configuration list for PBXProject "Kvitto" */;
@@ -575,6 +628,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -592,6 +646,7 @@
 				A795445B1BC3FC1600EC73B1 /* Kvitto */,
 				A79544641BC3FC1600EC73B1 /* Unit Tests */,
 				A70247881BC5763D0070DACA /* Demo (iOS) */,
+				D79FD8762379483B00D04B8F /* Kvitto Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -818,6 +873,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D79FD8752379483B00D04B8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -850,6 +912,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D79FD8732379483B00D04B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79FD89F2379484C00D04B8F /* Receipt.swift in Sources */,
+				D79FD89E2379484C00D04B8F /* InAppPurchaseReceipt.swift in Sources */,
+				D79FD89D2379484C00D04B8F /* PKCS7Container.swift in Sources */,
+				D79FD8A02379484C00D04B8F /* Functions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -872,6 +945,11 @@
 			isa = PBXTargetDependency;
 			name = "DTFoundation (iOS)";
 			targetProxy = A7D95AEA1BC40E0700AB8A21 /* PBXContainerItemProxy */;
+		};
+		D79FD89C2379484400D04B8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DTFoundation (OSX)";
+			targetProxy = D79FD89B2379484400D04B8F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1200,6 +1278,113 @@
 			};
 			name = Release;
 		};
+		D79FD87C2379483B00D04B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y4QG7ZV64J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = canary.Kvitto;
+				PRODUCT_NAME = Kvitto;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D79FD87D2379483B00D04B8F /* Coverage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y4QG7ZV64J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = canary.Kvitto;
+				PRODUCT_NAME = Kvitto;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Coverage;
+		};
+		D79FD87E2379483B00D04B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y4QG7ZV64J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = canary.Kvitto;
+				PRODUCT_NAME = Kvitto;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1239,6 +1424,16 @@
 				A79544711BC3FC1600EC73B1 /* Debug */,
 				A70247021BC55D4B0070DACA /* Coverage */,
 				A79544721BC3FC1600EC73B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D79FD89A2379483B00D04B8F /* Build configuration list for PBXNativeTarget "Kvitto Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D79FD87C2379483B00D04B8F /* Debug */,
+				D79FD87D2379483B00D04B8F /* Coverage */,
+				D79FD87E2379483B00D04B8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
